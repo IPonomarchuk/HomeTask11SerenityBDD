@@ -1,13 +1,12 @@
 package com.aqacourses.serenity.pages;
 
 import com.aqacourses.serenity.utils.YamlParser;
+import java.util.List;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
 
 public abstract class AbstractPage extends PageObject {
 

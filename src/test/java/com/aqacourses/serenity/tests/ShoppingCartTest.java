@@ -32,16 +32,26 @@ public class ShoppingCartTest {
     @Test
     public void testShoppingCartTest() {
 
+        // Open site
         homePageSteps.userOpensSiteAndGetsHomePage();
+        // Click on the "Sign in" link
         homePageSteps.userClicksOnSingInButtonAndProceedToLoginPage();
+        // Fill in email and password to login form and click on the "Sign in" button
         loginPageSteps.userFillsInEmailAndPasswordToLoginFormAndClickOnTheSignInButton();
+        // Open TShirtsPage
         myAccountPageSteps.userClicksOnTShirtsButton();
+        // Open the product
         tShirtsPageSteps.userClicksOnProduct("Faded Short Sleeve T-shirts");
+        // Verify breadcrumb
         productPageSteps.verifyBreadcrumb(
                 Categories.WOMEN.toString() + ">" + Categories.TOPS + ">" + Categories.TSHIRTS);
+        // Add product to shopping cart and proceed to checkout
         productPageSteps.userClicksOnAddToCartButtonAndThenClicksOnProceedToCheckoutButton();
-        shoppingCartPageSteps.UserClicksOnPlusButtonToIncreaseQuantityOfProductByOne();
+        // Increase quantity of product by one
+        shoppingCartPageSteps.userClicksOnPlusButtonToIncreaseQuantityOfProductByOne();
+        // Validate total price
         shoppingCartPageSteps.userValidatesTheTotalPrice();
+        // Delete product and verify that message is displayed
         shoppingCartPageSteps.userDeletesProductAndVerifiesThatCorrectMessageIsDisplayed();
     }
 }

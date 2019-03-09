@@ -28,7 +28,7 @@ public class ShoppingCartPageSteps extends ScenarioSteps {
 
     /** Increase quantity of product by one */
     @Step("User clicks on plus button to increase quantity of product by one")
-    public void UserClicksOnPlusButtonToIncreaseQuantityOfProductByOne() {
+    public void userClicksOnPlusButtonToIncreaseQuantityOfProductByOne() {
         onShoppingCartPage().increaseQuantityOfProductByOne();
     }
 
